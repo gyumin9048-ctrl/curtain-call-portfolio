@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-# Pass 7: candidate frames for exploration/escape captures -> raw branch
+# Pass 8: candidate frames (final 11/22, playtest 11/12) -> raw branch
 set -euo pipefail
-mkdir -p work out/raw/duo out/raw/m2
-gdown -q 1qv7ydknLWTyEDdJ7fCDoa7sfCfsuXXP9 -O work/duo.mp4
-gdown -q 1NRLmhDEtP_EYtouB58YGQ2mfPLBAgKzp -O work/m2.mp4
-ffprobe -v error -show_entries format=duration -of csv=p=0 work/duo.mp4 > out/raw/duo/duration.txt
-ffprobe -v error -show_entries format=duration -of csv=p=0 work/m2.mp4 > out/raw/m2/duration.txt
-ffmpeg -loglevel error -i work/duo.mp4 -vf "fps=1/2,scale=960:-2" -q:v 4 out/raw/duo/f%04d.jpg
-ffmpeg -loglevel error -i work/m2.mp4 -vf "fps=1/5,scale=960:-2" -q:v 4 out/raw/m2/f%04d.jpg
-ls out/raw/duo | wc -l; ls out/raw/m2 | wc -l
+mkdir -p work out/raw/fin out/raw/pt1
+gdown -q 1RRoWSwHCNq1Kn-u5omY2GA8L6rbDJGHT -O work/fin.mp4
+gdown -q 1nclc-YnSJqY0QXUB_7JE8Fthctuqk4yB -O work/pt1.mp4
+for k in fin pt1; do
+  ffprobe -v error -show_entries format=duration -of csv=p=0 work/$k.mp4 > out/raw/$k/duration.txt
+  ffmpeg -loglevel error -i work/$k.mp4 -vf "fps=1/8,scale=1280:-2" -q:v 3 out/raw/$k/f%04d.jpg
+  montage -label '%t' -pointsize 22 out/raw/$k/f*.jpg -tile 8x -geometry 320x180+2+2 out/raw/$k-sheet.jpg || true
+done
+ls out/raw/fin | wc -l; ls out/raw/pt1 | wc -l
