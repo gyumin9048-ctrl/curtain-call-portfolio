@@ -28,6 +28,6 @@ jobs:
             git push origin HEAD:main
           fi
           if [ -d out/raw ] && [ -n "$(ls -A out/raw)" ]; then
-            cd out/raw && git init -q && git checkout -q -b raw && git add -A && git commit -qm "raw captures" \
+            cd out/raw && git init -q && git checkout -q -b raw && git add -A && git -c user.name=gyumin9048-ctrl -c user.email=gyumin9048-ctrl@users.noreply.github.com commit -qm "raw captures" \
               && git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" raw
           fi
