@@ -274,3 +274,6 @@ footer b{font-family:"Black Han Sans";font-weight:400;color:#fff;font-size:22px}
 .lb p{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#ddd;font-size:14px;margin:0}
 @media(max-width:900px){.figs.c3,.figs.c4,.vs,.route,.cs,.intent{grid-template-columns:repeat(2,minmax(0,1fr))}.roles.six{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.figs.c2,.figs.c3,.figs.c4,.vs,.route,.cs,.intent,.roles.six{grid-template-columns:1fr}}
+.why{font-family:inherit!important;font-size:13px!important;font-weight:700;display:inline-block!important;margin:0 6px 0 0!important;padding:1px 7px;border-radius:999px;background:var(--rsoft);color:var(--red2)}
+.evcap .whyp{background:rgba(216,163,58,.12);border-left:3px solid var(--mustard);padding:8px 10px;border-radius:0 8px 8px 0}
+.evcap .whyp span{display:inline-block;font-weight:700;color:var(--mustard);margin-right:6px}
