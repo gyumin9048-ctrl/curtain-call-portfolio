@@ -171,12 +171,12 @@
 
   <h3 class="sub">M3 오브젝트 배치와 선택 동선</h3>
   <div class="figs c2">
-    <figure><img src="assets/m3-map-objects.webp" alt="M3 대기실 오브젝트 배치 지도" loading="lazy"><figcaption><b>오브젝트 배치</b> 단서·도구·기믹을 층별로 배치. 조작을 배우는 동선 위의 상자에는 꽝을 넣지 않음</figcaption></figure>
+    <figure><img src="assets/m3-map-objects.webp" alt="M3 대기실 오브젝트 배치 지도" loading="lazy"><figcaption><b>오브젝트 배치</b> 단서·도구·기믹을 층별로 배치. 상자를 부수는 데 비용이 들기 때문에, 부순 상자에서는 꽝 없이 무조건 보상이 떨어지도록 설정</figcaption></figure>
     <figure><img src="assets/m3-map-optional-routes.webp" alt="M3 기타 오브젝트 탐색 동선 지도" loading="lazy"><figcaption><b>선택 동선</b> 메인 동선 밖의 숨겨진 방·숏컷·보상 경로</figcaption></figure>
   </div>
 
-  <h3 class="sub">구조도의 동선을 플레이로</h3>
-  <p class="lead" style="margin-top:0">숙소에서 시작해 지하로 내려가며 단계마다 새 조작(목마 → 부수기 → 단서 읽기 → 배선 절단 → 암호 입력)을 하나씩 쓰는 메인 탈출 동선.</p>
+  <h3 class="sub">탐색과 탈출 과정</h3>
+  <p class="lead" style="margin-top:0">숙소에서 시작해 지하로 내려가 관리실의 문을 열고 암호를 입력하면 탈출로 스테이지로 이동한다.</p>
   <ol class="route">
     <li><img src="assets/play-vent.webp" alt="숙소 환풍구 철망 위를 지나는 플레이 화면" loading="lazy"><div><b>숙소 환풍구</b>2인 목마로 2.3m 환풍구에 올라 설비실로. 배터리로 셔터를 열면 지하 기계실 캣워크</div></li>
     <li><img src="assets/play-toilet-wall.webp" alt="숙소 화장실의 녹슨 벽 앞" loading="lazy"><div><b>화장실 녹슨 벽</b>F를 길게 눌러 부수면 폐기물 보관소 → 배관 구역 → 뒤쪽 복도 → 이전 세대 생활 장소</div></li>
@@ -185,6 +185,16 @@
     <li><img src="assets/play-admin-pc.webp" alt="관리실 컴퓨터 입력 화면" loading="lazy"><div><b>관리실 컴퓨터</b>찾은 날짜와 암구호 입력. 관리실 문은 배선 절단·빗장·키 카드 중 하나로 열기</div></li>
     <li><img src="assets/play-escape-open.webp" alt="탈출로가 열리며 붉은 빛이 쏟아지는 화면" loading="lazy"><div><b>탈출로 개방</b>컴퓨터·배선 조건을 모두 채우면 나가는 길 개방 연출 → 탈출로 입구에 전원 집결</div></li>
   </ol>
+
+  <h3 class="sub">탈출 성공 · 엔딩</h3>
+  <div class="two">
+    <figure class="shot"><img class="zoom" src="assets/ending-duo-success.webp" alt="탈출구로 향하는 단원, 서커스 천막 밖으로 나온 두 단원, 3일차 탈출 성공 결과 화면, 로비로 돌아온 두 단원" loading="lazy" style="aspect-ratio:auto;object-fit:contain"><figcaption>2인 플레이 · 3일차 탈출 성공</figcaption></figure>
+    <div class="task"><h3>탈출 이후</h3><ul>
+      <li>탈출로 스테이지 끝의 탈출구를 지나면 단원들이 서커스 천막 밖 들판으로 나간다.</li>
+      <li>결과 화면에 탈출·미탈출 인원과 단원별 탈출 여부, 공연별 기록이 남는다.</li>
+      <li>“로비로 돌아가기”를 누르면 첫 로비로 돌아가고, 같은 파티로 새 런을 바로 시작할 수 있다.</li>
+    </ul></div>
+  </div>
 
   <div class="scroll"><table>
     <thead><tr><th>기믹</th><th>여는 방법 (맨몸 / 말뚝 뽑개)</th></tr></thead>
@@ -386,14 +396,16 @@
 <section id="docs" class="band"><div class="wrap">
   <p class="eyebrow">04 · DOCUMENTS</p>
   <h2>참여 문서</h2>
-  <p class="lead">Confluence와 Drive에 작성한 기획서와 팀 문서. 썸네일을 누르면 페이지를 크게 볼 수 있고, 링크로 PDF 전체를 열 수 있다.</p>
+  <p class="lead">작성한 기획서와 팀 문서. 썸네일을 누르면 페이지를 크게 볼 수 있고, 링크로 PDF 전체를 열 수 있다.</p>
   <div class="dlist">
     <article class="dcard"><span class="thumb"><img src="assets/team-idea-05.webp" alt="아이디어 발표 5쪽" loading="lazy" class="zoom"></span><small>팀 · 9/23</small><h3>아이디어 발표</h3><p>규칙 7개, 플레이어 흐름 스토리보드, 루프 한 장, 핵심 설계 의도</p><a class="tlink" href="https://docs.google.com/presentation/d/1xrsUv_40_wQQjMGSjILrkiwvWs-ztYTS5-x_AKJY__0/view" target="_blank" rel="noopener">슬라이드 보기 →</a></article>
     <article class="dcard"><span class="thumb"><img src="assets/team-concept-p5.webp" alt="컨셉 문서 5쪽 비주얼 가이드" loading="lazy" class="zoom"></span><small>팀 · 10/6</small><h3>컨셉 문서</h3><p>게임 한 줄, 핵심 재미, 세계관, 하루 흐름, 타겟, 비주얼 가이드</p><a class="tlink" href="https://drive.google.com/file/d/1rSVNP2ffglw-E81ZQbLl1k_Wqm5HNFMr/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
     <article class="dcard"><span class="thumb"><img src="assets/team-m1scope-p2.webp" alt="M1 작업 범위 문서 2쪽" loading="lazy" class="zoom"></span><small>팀 · M1</small><h3>M1 작업 범위 문서</h3><p>한 바퀴 완성 목표, 작업 목록과 우선순위, Best / Worst Case</p><a class="tlink" href="https://drive.google.com/file/d/13WbEMoydhjPQq1JYEhyoonGQVQf_3ls4/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
     <article class="dcard"><span class="thumb"><img src="assets/guide-16.webp" alt="단원 수첩 16쪽" loading="lazy" class="zoom"></span><small>M1 · 플레이 가이드</small><h3>단원 수첩</h3><p>M1 공개용 플레이 가이드. 게임 소개, 조작, 대기실·상점·정비·공연 일정</p><a class="tlink" href="https://drive.google.com/file/d/171gz08CiTHh53IDAkS_3zTghx7N9p39i/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
-    <article class="dcard"><span class="thumb"><img src="assets/doc-m1-waiting-p1.webp" alt="대기실 기획서 첫 페이지" loading="lazy" class="zoom"></span><small>M1 · Confluence</small><h3>대기실 기획서</h3><p>기획 의도, 대기실 정의·코어루프, 공간 구성과 이동 동선, 상점, 백스테이지</p><span class="private">Confluence 팀 스페이스 · 페이지 캡처</span></article>
-    <article class="dcard"><span class="thumb"><img src="assets/doc-m2-rehearsal-p6.webp" alt="리허설 기획서 6쪽" loading="lazy" class="zoom"></span><small>M2 · Confluence</small><h3>공연 리허설 시스템 기획서</h3><p>리허설 기획 의도, 외줄 3단계·인간대포 리허설 구조도, 가이드·퀘스트 패널, 길안내</p><span class="private">Confluence 팀 스페이스 · 페이지 캡처</span></article>
+    <article class="dcard"><span class="thumb"><img src="assets/doc-m1-waiting-p1.webp" alt="대기실 기획서 첫 페이지" loading="lazy" class="zoom"></span><small>M1 · 기획서</small><h3>대기실 2차 기획서</h3><p>기획 의도, 대기실 정의·코어루프, 공간 구성과 이동 동선, 상점, 백스테이지</p><a class="tlink" href="https://drive.google.com/file/d/17gKEfhgm_MMZrmPLcJc0FM3vXus69YbH/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
+    <article class="dcard"><span class="thumb"><img src="assets/m2-structure-a.webp" alt="대기실 공간 구조 기획서 구조 A" loading="lazy" class="zoom"></span><small>M2 · 기획서</small><h3>대기실 공간 구조 기획서</h3><p>백스테이지 통합, 구조 A·B·C 제작 규칙, 공통 고정 구역과 숨은 길</p><a class="tlink" href="https://drive.google.com/file/d/1Ip1-5IyLSWsyj4D2h7zZkoxPt7nkgqJp/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
+    <article class="dcard"><span class="thumb"><img src="assets/doc-m2-rehearsal-p6.webp" alt="리허설 기획서 6쪽" loading="lazy" class="zoom"></span><small>M2 · 기획서</small><h3>공연 리허설 시스템 기획서</h3><p>리허설 기획 의도, 외줄 3단계·인간대포 리허설 구조도, 가이드·퀘스트 패널, 길안내</p><a class="tlink" href="https://drive.google.com/file/d/1Oex8IXuVSPXGlsHruppI09VSn9nLocTQ/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
+    <article class="dcard"><span class="thumb"><img src="assets/art-backstage-rust.webp" alt="에셋 관리와 검수 기준 문서의 무대 뒤편 컨셉아트" loading="lazy" class="zoom"></span><small>컨셉 · 기준 문서</small><h3>에셋 관리와 검수 기준</h3><p>톤앤매너, 공간별 설계 의도, 색·조명 기준, 에셋 검수 영역과 판정</p><a class="tlink" href="https://drive.google.com/file/d/1IM7VsC7H6TWg150eUz73wkpFcGCIKcYs/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
     <article class="dcard"><span class="thumb"><img src="assets/doc-m3-change-p1.webp" alt="M3 대기실 변경안 첫 페이지" loading="lazy" class="zoom"></span><small>M3 · 기획서</small><h3>대기실 변경안 · 신규 지역</h3><p>열쇠 동선 폐기, 방 맞바꿈, 신규 지역 8곳, 최종 탈출 동선, 구역 목록</p><a class="tlink" href="https://drive.google.com/file/d/1LEqPRgVtSGnERuPGbNpHuSW2qw_QZ3Yx/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
     <article class="dcard"><span class="thumb"><img src="assets/doc-m3-objects-p1.webp" alt="M3 기물 오브제 기획서 첫 페이지" loading="lazy" class="zoom"></span><small>M3 · 기획서</small><h3>대기실 기물 · 오브제</h3><p>공통 조작, 벽 낙서·숨겨진 낙서, 종이·기록물, 영상 문구</p><a class="tlink" href="https://drive.google.com/file/d/1mGBj5wNqm-7ESoWqyd2jsBT_Ll76r8jI/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
     <article class="dcard"><span class="thumb"><img src="assets/doc-m3-cutscene-p9.webp" alt="M3 컷신 역기획서 스토리보드" loading="lazy" class="zoom"></span><small>M3 · 기획서</small><h3>컷신 역기획서</h3><p>컷신 3편의 기획 의도, 전달 정보 우선순위, 감정 목표, 샷별 화면, 연출 규칙</p><a class="tlink" href="https://drive.google.com/file/d/1tQnjFcOdpIjCybPRL3ExwYeuJyCF9DSX/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
