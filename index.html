@@ -43,7 +43,13 @@
 <section id="about" class="band"><div class="wrap">
   <p class="eyebrow">01 · PROJECT OVERVIEW</p>
   <h2>환호 속에서 살아남고, 커튼 뒤에서 탈출하라</h2>
-  <p class="lead">플레이어는 링마스터를 흉내 낸 초월적 존재의 비위를 맞추기 위해 하루 두 번 공연을 치르고, 공연 사이에는 대기실로 돌아와 정비하며 탈출로를 찾습니다. 밝고 귀여운 서커스 외형과 그 아래 깔린 불합리한 규칙 사이의 낙차가 이 게임의 핵심 톤입니다.</p>
+  <p class="lead">“웃음이 먼저 나오는 협동 코미디 공포”를 핵심 경험으로 잡았습니다. 밝고 귀여운 서커스 외형 아래 불합리한 규칙이 깔려 있는 낙차를 만들기 위해, 플레이어가 초월적 존재의 비위를 맞추는 공연을 하루 두 번 치르고 공연 사이에는 대기실로 돌아와 정비하며 탈출로를 찾는 반복 구조로 설계했습니다.</p>
+  <div class="intent">
+    <div><b>무대 위에서는 익살</b>실패와 추락조차 웃음이 되도록 공연은 과장된 코믹 동작과 물리 반응으로 구성했습니다.</div>
+    <div><b>무대 뒤에서는 긴장</b>대기실은 쉬는 곳이지만 머물면 결국 죽는다는 암시를 주어, 휴식 중에도 탈출해야 한다는 긴장이 남도록 했습니다.</div>
+    <div><b>“나갈 수 있겠는데?”</b>서커스장을 낡은 천과 버려진 자재로 급조된 허술한 장소로 설정해, 탈출이 가능하다는 인식을 직관적으로 주도록 했습니다.</div>
+    <div><b>함께여야 열리는 길</b>2~4인이 티격태격하며 협동하는 경험이 중심이 되도록 목마·트램펄린 같은 함께 하는 동작으로 길이 열리게 했습니다.</div>
+  </div>
   <div class="loop" aria-label="M3 최종 1일차 흐름">
     <div class="st"><b>리허설</b><small>연습실에서 외줄 5구간 학습</small></div>
     <div class="st dark"><b>첫 공연</b><small>외줄타기 공연</small></div>
@@ -92,7 +98,7 @@
 <section id="process" class="evo band"><div class="wrap">
   <p class="eyebrow">03 · DEVELOPMENT PROCESS</p>
   <h2>개발 과정: 방탈출 기반 탐색 시스템과 공간 설계</h2>
-  <p class="lead">대기실은 M1에서 쉬는 거점으로 시작해, M2에서 단서를 모아 문을 여는 방탈출 공간이 됐고, M3에서 맨몸과 도구로 길을 여는 구조로 확정됐습니다. 구조도와 컨셉아트, 실제 플레이 화면을 단계별로 넘겨 보세요.</p>
+  <p class="lead">대기실을 “쉬면서도 탈출을 준비하는 곳”으로 만드는 것이 목표였습니다. M1에서는 완급을 조절하는 정비 거점으로 설계했고, M2에서는 플레이어가 직접 단서를 모아 길을 찾는 방탈출 공간으로 확장했습니다. M3에서는 탐색이 지루하다는 테스트 결과를 반영해 맨몸과 도구로 길이 바로 열리는 구조로 다시 설계했습니다. 단계마다 구조도와 컨셉아트, 실제 플레이 화면을 넘겨 볼 수 있습니다.</p>
   <div class="stage3">
     <div><i>M1 · ~ 10.22</i><b>구조도 1 · 정비 거점</b>8개 공간과 별도 백스테이지. 상점·밤 정비·스케줄표 중심</div>
     <div><i>M2 · ~ 11.06</i><b>구조도 2 · 방탈출 공간</b>백스테이지를 대기실에 통합. 구조 A, 탐색 오브젝트 44개, 열쇠·암호</div>
@@ -112,18 +118,25 @@
 <section id="structure" class="band"><div class="wrap">
   <p class="eyebrow">STRUCTURE MAP × 3</p>
   <h2>세 번 바뀐 대기실 구조도</h2>
-  <p class="lead">구조도는 마일스톤마다 다시 그렸습니다. 매번 플레이테스트 결과와 팀 결정을 반영했고, 그림을 누르면 크게 볼 수 있습니다.</p>
+  <p class="lead">공연장으로 가는 길은 한 줄로 명확하게, 탐색 동선은 가지를 뻗도록 설계한다는 원칙은 유지하고, 마일스톤마다 플레이테스트 결과와 팀 결정에 맞춰 구조를 다시 그렸습니다. 그림을 누르면 크게 볼 수 있습니다.</p>
   <div class="vs">
-    <figure><img src="assets/m1-structure-lobby.webp" alt="M1 대기실 구조도: 원형 로비 1을 중심으로 숙소, 상점, 소품실, 폐기물 보관소, 무대 입구 통로, 공연 스테이지 입구, 전문가 대기실 8개 공간" loading="lazy"><i>M1 · 구조도 1</i><b>로비 중심 8개 공간</b><p>원형 로비에서 모든 방으로 한 번에 닿는 정비 거점. 무대 입구 통로는 동쪽으로 일직선. 탐색은 분리된 백스테이지에서 진행</p></figure>
-    <figure><img src="assets/m2-structure-a.webp" alt="M2 대기실 구조 A: 연습실, 작업실, 소품실, 계단, 숙소, 화장실, 배관 구역, 폐기물 보관소, 화물 적재 공간, 무대 장치 보관실" loading="lazy"><i>M2 · 구조도 2</i><b>구조 A · 방탈출 공간</b><p>백스테이지를 대기실 안으로 합치고 연습실·작업실·배관 구역·화물 적재 공간을 추가. 화장실 벽을 부수면 배관 구역으로 이어지는 숨은 길</p></figure>
-    <figure><img src="assets/m3-map-main-route.webp" alt="M3 메인 탈출 동선 구조도: 지상, 지하 상부, 지하 하부에 걸친 탈출 동선" loading="lazy"><i>M3 · 구조도 3</i><b>지상·지하 3층 탈출 동선</b><p>무대 입구 통로를 북쪽으로, 작업실·소품실을 남쪽 전실로 맞바꿈. 지하 기계실·관리실까지 이어지는 최종 탈출 동선</p></figure>
+    <figure><img src="assets/m1-structure-lobby.webp" alt="M1 대기실 구조도: 원형 로비 1을 중심으로 숙소, 상점, 소품실, 폐기물 보관소, 무대 입구 통로, 공연 스테이지 입구, 전문가 대기실 8개 공간" loading="lazy"><i>M1 · 구조도 1</i><b>로비 중심 8개 공간</b><p><b style="font-size:14px;font-family:inherit;font-weight:700;display:inline;color:var(--red)">의도</b> 대기실은 공연 전 모든 플레이어가 반드시 거치는 거점이므로, 원형 로비에서 상점·숙소·소품실에 바로 닿고 무대 입구 통로는 일직선으로 두어 헤매지 않게 했습니다.</p></figure>
+    <figure><img src="assets/m2-structure-a.webp" alt="M2 대기실 구조 A: 연습실, 작업실, 소품실, 계단, 숙소, 화장실, 배관 구역, 폐기물 보관소, 화물 적재 공간, 무대 장치 보관실" loading="lazy"><i>M2 · 구조도 2</i><b>구조 A · 방탈출 공간</b><p><b style="font-size:14px;font-family:inherit;font-weight:700;display:inline;color:var(--red)">의도</b> 정비와 탐색이 다른 공간에서 끊기지 않고 하나의 흐름으로 이어지도록 백스테이지를 대기실 안으로 합쳤습니다. 화장실 벽 뒤 배관 구역처럼 익숙한 방 안에 숨은 길을 두어 발견하는 재미를 넣었습니다.</p></figure>
+    <figure><img src="assets/m3-map-main-route.webp" alt="M3 메인 탈출 동선 구조도: 지상, 지하 상부, 지하 하부에 걸친 탈출 동선" loading="lazy"><i>M3 · 구조도 3</i><b>지상·지하 3층 탈출 동선</b><p><b style="font-size:14px;font-family:inherit;font-weight:700;display:inline;color:var(--red)">의도</b> 숙소 환풍구 입구를 혼자서는 닿지 않는 2.3m로 잡아 2인 목마를 전제로 했고, 지상에서 지하 깊은 곳으로 내려갈수록 탈출에 가까워지는 수직 동선으로 정리했습니다.</p></figure>
   </div>
 </div></section>
 
 <section id="explore" class="band mist"><div class="wrap">
   <p class="eyebrow">EXPLORATION SYSTEM</p>
   <h2>단서를 읽고, 부수고, 끊어서 여는 길</h2>
-  <p class="lead">M2에서는 열쇠와 비밀번호를 모아 문을 여는 전형적인 방탈출 구조로 탐색 오브젝트 44개와 도구 5종을 만들었습니다. 플레이테스트에서 탐색 구간이 지루하다는 응답(9/11)이 나와, M3에서는 열쇠를 걷어 내고 이미 있는 조작으로 길을 바로 여는 통로 기믹으로 다시 짰습니다.</p>
+  <p class="lead">대기실 기획서의 “세계관 탐색 공간”과 “탈출 준비 공간”을 플레이로 만드는 것이 목표였습니다. 게임이 직접 알려 주지 않는 이야기를 플레이어가 단서로 모으고, 그 단서가 곧 탈출 방법이 되도록 방탈출 구조를 설계했습니다. M2에서는 열쇠와 비밀번호를 모으는 구조로 탐색 오브젝트 44개와 도구 5종을 만들었고, 탐색 구간이 지루하다는 응답(9/11)을 받은 뒤 M3에서 길이 바로 열리는 통로 기믹으로 다시 설계했습니다.</p>
+  <h3 class="sub">기획 의도</h3>
+  <div class="intent">
+    <div><b>단서가 곧 열쇠</b>이전 세대 단원이 남긴 낙서·노트·비디오테이프를 읽으며 이야기를 알아 가고, 그 안에서 관리실 컴퓨터의 날짜와 암구호를 찾도록 이야기와 탈출을 하나로 묶었습니다.</div>
+    <div><b>막히지 않는 탐색</b>열쇠를 못 찾아 멈추는 시간이 지루함의 원인이었기 때문에, 도구가 없어도 맨몸으로 길을 열 수 있고 도구는 속도만 올리도록 했습니다.</div>
+    <div><b>걸으면서 배우는 조작</b>이동 중 자연스럽게 탐색을 배우도록 학습용 기물과 방을 동선 위에 두고, 학습용 상자에는 꽝을 넣지 않았습니다.</div>
+    <div><b>쌓이는 탐색 진행</b>숏컷은 한 번 열면 계속 열려 있게 해, 공연 사이 짧은 탐색 시간이 반복돼도 진행이 이어지도록 했습니다. 세대가 바뀌면 초기화됩니다.</div>
+  </div>
 
   <div class="figs c2">
     <figure><img src="assets/m2-play-route.webp" alt="M2 구조 A 단서 수집과 탈출 준비 동선 다이어그램" loading="lazy" class="zoom" style="object-fit:contain;background:#fff"><figcaption><b>M2 · 단서 수집 동선</b> 로비 → 작업실 → 숙소·화장실 → 배관 → 폐기물 보관소 → 지하. 권장 방문 순서와 필수 경로를 색으로 구분</figcaption></figure>
@@ -145,6 +158,7 @@
   </div>
 
   <h3 class="sub">구조도의 동선을 실제 플레이로</h3>
+  <p class="lead" style="margin-top:0">메인 탈출 동선은 숙소에서 시작해 지하로 내려가며, 단계마다 새 조작(목마 → 부수기 → 단서 읽기 → 배선 절단 → 암호 입력)을 하나씩 쓰도록 배치했습니다.</p>
   <ol class="route">
     <li><img src="assets/play-vent.webp" alt="숙소 환풍구 철망 위를 지나는 플레이 화면" loading="lazy"><div><b>숙소 환풍구</b>2인 목마로 2.3m 환풍구에 올라 설비실로. 배터리로 셔터를 열면 지하 기계실 캣워크</div></li>
     <li><img src="assets/play-toilet-wall.webp" alt="숙소 화장실의 녹슨 벽 앞에 선 플레이 화면" loading="lazy"><div><b>화장실 녹슨 벽</b>F를 길게 눌러 부수면 폐기물 보관소 → 배관 구역 → 뒤쪽 복도 → 이전 세대 생활 장소</div></li>
@@ -179,11 +193,17 @@
 <section id="cutscene" class="tone band"><div class="wrap">
   <p class="eyebrow">CUTSCENE</p>
   <h2>대사 없이 전하는 세 개의 기록</h2>
-  <p class="lead">서커스장에 갇힌 단원들이 겪은 일을 낡은 비디오테이프 기록으로 전달합니다. 대기실에서 테이프를 찾아 TV에 넣으면 재생되어, 탐색 자체가 세계관을 알아 가는 과정이 되도록 했습니다. 컨셉아트를 잘라 관절을 움직이는 컷아웃 애니메이션으로 만들었습니다.</p>
+  <p class="lead">서커스장에 갇힌 단원들이 겪은 일을 대사 없이 영상 기록만으로 전달하는 것을 목표로 했습니다. 낡은 비디오테이프에 녹화된 기록물로 설정하고, 대기실에서 테이프를 찾아 TV에 넣어야 재생되게 해 탐색이 곧 세계관을 알아 가는 과정이 되도록 설계했습니다. 그림체가 게임과 어긋나지 않도록 컨셉아트를 잘라 관절을 움직이는 컷아웃 애니메이션으로 만들었습니다.</p>
   <div class="cs">
     <article><img src="assets/cs-tape-4.webp" alt="RUN이라고 적힌 쪽지 클로즈업" loading="lazy"><div><small>CS_01 · 3인칭 · 31.7초 · 8샷</small><b>비디오테이프</b>끌려와 강제로 공연하고, 실패하면 단장에게 벌을 받는 곳. 누군가 남긴 “RUN”. 궁금함 → 불안 → 공포 → 경고</div></article>
     <article><img src="assets/cs-rec1-1.webp" alt="REC 표시가 있는 화면 속 여우·고양이·까마귀 단원" loading="lazy"><div><small>CS_02 · 개 단원 1인칭 · 32.1초 · 8샷</small><b>공연자 기록</b>카메라를 든 개 단원이 본 동료들의 유대와 그 유대가 꺾이는 순간. 어색함 → 믿음 → 상실 → 체념</div></article>
     <article><img src="assets/cs-rec2-2.webp" alt="노트북 화면에 초록색 코드가 흐르는 해킹 장면" loading="lazy"><div><small>CS_03 · 여우 단원 1인칭 · 45.5초 · 10샷</small><b>공연자 기록 2</b>세상이 무너진 날부터 탈출 시도가 막히기까지. 평온 → 붕괴 → 결심 → 들킴 → 그리움</div></article>
+  </div>
+  <h3 class="sub" style="color:#fff">편별 기획 의도</h3>
+  <div class="tones">
+    <div><small>CS_01 · 3인칭</small><b>밖에서 들여다본 서커스장</b><p>누가 찍었는지 모르는 영상으로 만들어 거리감을 주고, 실패 → 조롱 → 처벌을 반복해 이곳의 규칙을 각인시킵니다. 마지막에 남는 “RUN”은 관리실 컴퓨터 암구호로 이어집니다.</p></div>
+    <div><small>CS_02 · 개 단원 1인칭</small><b>붙잡아 준 손, 놓친 손</b><p>외줄 장면을 두 번 써서 처음에는 붙잡아 주고 두 번째는 붙잡지 못하게 했습니다. 동료를 찍던 카메라가 단장의 손에서 다시 건네지며 이 영상이 왜 찍혔는지 드러납니다.</p></div>
+    <div><small>CS_03 · 여우 단원 1인칭</small><b>혼자 남은 사람</b><p>세상이 무너진 날부터 탈출 계획이 막히는 순간까지 한 사람을 따라갑니다. 탈출 장면에 비틀거리는 구간을 넣어 일행과 떨어졌다는 감각을 남기고, 네 사람이 모인 보너스 컷으로 끝냅니다.</p></div>
   </div>
   <h3 class="sub" style="color:#fff">연출 규칙</h3>
   <div class="tones">
@@ -205,7 +225,14 @@
 <section id="art" class="band"><div class="wrap">
   <p class="eyebrow">WORLD SETTING &amp; ART DIRECTION</p>
   <h2>서커스 설정과 폐공장 대기실, 게임의 색</h2>
-  <p class="lead">게임의 배경을 서커스로 정하고, 무대(급조된 서커스장)와 무대 뒤(방치된 폐공장)를 대비시키는 공간 테마를 설정했습니다. 그 기준을 톤앤매너 문서와 에셋 검수 기준으로 만들어 팀 전체 에셋과 색을 맞췄습니다.</p>
+  <p class="lead">강제로 공연을 해야 살아남는다는 설정을 담을 무대로 서커스를 정했습니다. 화려한 무대(급조된 서커스장)와 그 이면(방치된 폐공장)을 대비시켜, 플레이어가 공간만 보고도 무엇을 해야 하는지 느끼게 하는 것을 목표로 공간 테마를 설정했습니다. 이 기준을 톤앤매너 문서와 에셋 검수 기준으로 만들어 팀 전체 에셋과 색을 맞췄습니다.</p>
+  <h3 class="sub">기획 의도</h3>
+  <div class="intent">
+    <div><b>허술한 서커스장</b>낡은 천과 버려진 자재로 급조된 장소로 보이게 해 “관리가 소홀하니 잘 하면 탈출할 수 있겠다”는 인식을 줍니다.</div>
+    <div><b>교도소 같은 대기실</b>먼지 쌓인 파이프와 곰팡이 얼룩의 폐공장으로 만들어, 여기 머물면 병들어 죽든 공연하다 죽든 결국 죽는다는 탈출 동기를 줍니다.</div>
+    <div><b>삭막한 무대 뒤 통로</b>화려한 무대의 이면을 폐쇄적으로 보여 줘, 단원들이 착취당하고 있다는 상황을 설명 없이 전달합니다.</div>
+    <div><b>공포는 조명과 색으로</b>웃음이 비명보다 먼저 오도록 고어 대신 조명·색·안개의 변화로 긴장을 만들고, 깜박이는 전구와 손글씨 간판으로 다가올 위협을 미리 보여 줍니다.</div>
+  </div>
   <div class="figs c3">
     <figure><img src="assets/art-center-stage.webp" alt="스포트라이트가 비추는 버려진 서커스장 중앙 무대" loading="lazy"><figcaption><b>무대</b> 링 위 스포트라이트 한 점 + 부드러운 필 라이트</figcaption></figure>
     <figure><img src="assets/art-backstage-rust.webp" alt="녹슨 철골과 배관이 가득한 무대 뒤편" loading="lazy"><figcaption><b>무대 뒤</b> 녹슨 철·노출 배관·안개, 교도소 같은 폐쇄감</figcaption></figure>
@@ -217,8 +244,8 @@
 
   <h3 class="sub">색 기준</h3>
   <div class="tones" style="margin-top:0">
-    <div style="background:var(--warm)"><small style="color:var(--red)">PALETTE</small><b style="color:var(--ink)">지배색 1 + 포인트색 1</b><p style="color:var(--soft)">서커스 빨강·노랑 + 네이비·크림이 기본. 공포 구간은 어두운 버건디나 흑백으로 반전합니다.</p></div>
-    <div style="background:var(--warm)"><small style="color:var(--red)">READABILITY</small><b style="color:var(--ink)">배경은 차갑게, 기물은 따뜻하게</b><p style="color:var(--soft)">협동 중 시선이 가야 할 오브젝트에 따뜻한 색을 줘 가독성을 확보했습니다.</p></div>
+    <div style="background:var(--warm)"><small style="color:var(--red)">PALETTE</small><b style="color:var(--ink)">지배색 1 + 포인트색 1</b><p style="color:var(--soft)">화면이 산만해지지 않도록 크게 쓰는 색을 두 개로 제한했습니다. 서커스 빨강·노랑 + 네이비·크림이 기본이고, 공포 구간은 어두운 버건디나 흑백으로 반전해 분위기 전환을 색으로 알립니다.</p></div>
+    <div style="background:var(--warm)"><small style="color:var(--red)">READABILITY</small><b style="color:var(--ink)">배경은 차갑게, 기물은 따뜻하게</b><p style="color:var(--soft)">여러 명이 함께 움직이는 화면에서도 상호작용할 기물이 바로 눈에 띄도록, 배경은 차가운 색으로 가라앉히고 기물에는 따뜻한 색을 주었습니다.</p></div>
     <div style="background:var(--warm)"><small style="color:var(--red)">LIGHT</small><b style="color:var(--ink)">전구색 기준 통일</b><p style="color:var(--soft)">조명 하나에 대비색 1~2가지. 대기실은 청록 배경광과 전구색 포인트, 방별 안개 밀도로 구분했습니다.</p></div>
   </div>
   <div class="swatch" aria-label="기준 색">
@@ -250,6 +277,13 @@
   <h2>공연은 리허설로, 대기실은 걸으면서 배우기</h2>
   <p class="lead">M1의 기획 의도는 규칙을 배우기 전에 묘기를 시켜 허둥지둥하는 재미를 주는 것이었지만, 공통 피드백은 “공연이 어렵고 규칙을 이해하기 어렵다”였고 실제 클리어 횟수는 0이었습니다. 그래서 M2에 첫 공연 전 리허설을 추가했습니다. 기획 의도는 플레이어가 갑작스런 상황에 던져지지 않고 공연 규칙을 배워 게임의 재미를 느끼게 하는 것입니다.</p>
 
+  <h3 class="sub">기획 의도</h3>
+  <div class="intent">
+    <div><b>실제 공연 그대로</b>리허설에서 배운 것이 공연에서 바로 통하도록 실제 공연 코스·HUD·조작을 그대로 쓰고, 실제 공연에는 퀘스트를 추가하지 않았습니다.</div>
+    <div><b>실패해도 부담 없이</b>배우는 단계이므로 추락해도 부상 없이 구간 출발점에서 다시 시작하고, 막히면 과반 동의로 구간을 넘길 수 있게 했습니다.</div>
+    <div><b>설명 없이 찾아가기</b>“다음 행동을 모르겠다”는 응답이 많았기 때문에, 진행자 설명 없이 다음 행동과 목적지를 스스로 찾는지를 통과 기준으로 삼았습니다.</div>
+    <div><b>해법은 알려 주지 않기</b>탐색 퍼즐은 단서와 도구의 쓰임까지만 알리고 탈출 해법은 숨겨, 방탈출의 발견하는 재미를 남겼습니다.</div>
+  </div>
   <h3 class="sub">외줄타기 리허설 구조도 (M2 기획서)</h3>
   <div class="figs c4 fit">
     <figure><img src="assets/m2-rehearsal-stage1.webp" alt="리허설 1단계 외줄타기 구조도: 균형 잡기와 줄 건너가기" loading="lazy"><figcaption><b>1단계</b> 균형 잡기 + 줄 건너가기</figcaption></figure>
