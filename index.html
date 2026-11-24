@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="커튼콜 프로젝트 포트폴리오: M1~M3 대기실 기획·레벨 디자인, 탐색 기믹, 리허설·튜토리얼, 에셋 관리와 톤앤매너">
+<title>커튼콜 | 서민규 프로젝트 포트폴리오</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+<nav><div class="wrap"><b>커튼<i>콜</i></b><div class="links"><a href="#about">소개</a><a href="#process">개발 과정</a><a href="#space">대기실</a><a href="#exploration">탐색</a><a href="#tutorial">튜토리얼</a><a href="#assets">에셋·톤</a><a href="#test">QA</a><a href="#docs">문서</a></div></div></nav>
+
+<header id="project" class="intro band"><div class="wrap">
+  <div>
+    <p class="eyebrow">CO-OP COMEDY HORROR · UNITY 6</p>
+    <h1>커튼<span>콜</span></h1>
+    <p class="one">강제로 서커스 무대에 선 단원들이 목숨을 건 공연을 버티며, 공연 사이 대기실을 뒤져 탈출로를 여는 2~4인 협동 게임.</p>
+    <dl class="meta">
+      <dt>장르</dt><dd>협동 · 코미디 공포 · 탈출</dd>
+      <dt>담당</dt><dd>서민규 · 대기실 기획·레벨 디자인·기능 구현, 리허설·튜토리얼 기획, 에셋 관리·톤앤매너</dd>
+      <dt>팀</dt><dd>4인 팀 프로젝트</dd>
+      <dt>개발 기간</dt><dd>2026.09 ~ 11.22 · M1 10.06~10.22 · M2 ~11.06 · M3 ~11.22</dd>
+      <dt>개발 환경</dt><dd>Unity 6 · PC · Jira · Confluence · Git</dd>
+    </dl>
+    <div class="acts">
+      <a class="btn soft" href="#process">M1 → M3 개발 과정 보기 →</a>
+      <span class="btn off" aria-disabled="true">플레이 영상 준비 중</span>
+    </div>
+  </div>
+  <figure class="screen"><img src="assets/m2-waiting-room-guide.png" alt="서커스 천막이 있는 대기실 로비에서 토끼 캐릭터가 서 있고, 대기실 안내 패널이 표시된 개발 화면"><figcaption>대기실 로비 · M2 개발 화면</figcaption></figure>
+</div>
+<div class="wrap fw"><div class="facts">
+  <div><strong>M1 → M3</strong><span>3번의 마일스톤마다 대기실 구조 재설계</span></div>
+  <div><strong>방 24곳 + 8곳</strong><span>공간 프리팹 24곳 · M3 신규 지역 8곳</span></div>
+  <div><strong>리허설 5구간</strong><span>첫 공연 전 조작·협동 학습</span></div>
+  <div><strong>74 → 16MB</strong><span>대기실 씬 용량 · Update 29.1 → 7.8ms</span></div>
+</div></div></header>
+
+<section id="about" class="band"><div class="wrap">
+  <p class="eyebrow">PROJECT OVERVIEW</p>
+  <h2>무대 위의 익살, 무대 뒤의 통제</h2>
+  <p class="lead">플레이어는 하루 두 번 서커스 공연을 치러 공동 자금을 벌고, 공연 사이 대기실에서 정비하고 탐색합니다. 4일차 아침의 탐색 제한 시간이 끝나기 전에 탈출로를 열어야 합니다. 대기실은 쉬는 곳이면서 이전 세대 단원의 흔적을 따라 탈출을 준비하는 곳이고, 저는 이 공간과 그 안의 학습·탐색 흐름을 맡았습니다.</p>
+  <div class="loop" aria-label="M3 최종 1일차 흐름">
+    <div class="st"><b>리허설</b><small>연습실에서 외줄 5구간 학습</small></div>
+    <div class="st dark"><b>첫 공연</b><small>외줄타기 공연</small></div>
+    <div class="st"><b>대기실 안내</b><small>전원 확인 뒤 구역 개방</small></div>
+    <div class="st key"><b>탐색 시간</b><small>단서·기믹으로 길 열기 · 시간이 끝나면 추격</small></div>
+    <div class="st dark"><b>두 번째 공연</b><small>무대 입구에 전원 집결</small></div>
+  </div>
+  <p class="note">M3 최종 기준 1일차 흐름입니다. 2·3일차도 공연과 탐색을 반복하고, 탈출 조건을 채우면 언제든 탈출로로 향할 수 있습니다.</p>
+
+  <h3 class="sub" id="role">담당 업무</h3>
+  <div class="roles">
+    <a href="#space"><small>SPACE</small><h3>대기실 기획·레벨 디자인</h3><p>1·2차 기획서, 공간 구조 A·B·C, M3 변경안과 신규 지역 8곳을 기획하고 Unity에서 제작했습니다.</p></a>
+    <a href="#exploration"><small>EXPLORATION</small><h3>탐색·통로 기믹</h3><p>탐색 오브젝트, 통로 기믹, 단서·기록 기물을 배치하고 최종 탈출 동선을 만들었습니다.</p></a>
+    <a href="#tutorial"><small>ONBOARDING</small><h3>리허설·튜토리얼</h3><p>공연 리허설 시스템과 대기실 안내 24개, 장소별 학습 이벤트를 기획·구현했습니다.</p></a>
+    <a href="#assets"><small>ASSETS · ART</small><h3>에셋 관리·톤앤매너</h3><p>에셋 검수 기준과 톤앤매너를 정하고 대기실 재질·조명·기물에 적용했습니다.</p></a>
+  </div>
+
+  <div class="galbtn"><button type="button" id="gp" aria-label="이전 화면">‹</button><button type="button" id="gn" aria-label="다음 화면">›</button></div>
+  <div class="gal" id="gal" tabindex="0" aria-label="개발 화면 갤러리">
+    <figure><img src="assets/m2-waiting-room-guide.png" alt="대기실 로비와 대기실 튜토리얼 안내 패널" loading="lazy"><figcaption>M2 · 대기실 로비와 첫날 튜토리얼 안내 패널</figcaption></figure>
+    <figure><img src="assets/m3-wall-graffiti.jpg" alt="'가고 싶지 않아'라는 붉은 벽 낙서를 조사하는 화면" loading="lazy"><figcaption>M3 · 벽 낙서 살펴보기 (회전·확대)</figcaption></figure>
+    <figure><img src="assets/m3-dorm-tv.jpg" alt="숙소 벽 앞의 낡은 TV와 열린 서랍장" loading="lazy"><figcaption>M3 · 숙소 TV, 비디오 테이프를 넣으면 기록 영상 재생</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="process" class="evo band"><div class="wrap">
+  <p class="eyebrow">DEVELOPMENT PROCESS</p>
+  <h2>개발 과정: 마일스톤마다 다시 짠 대기실</h2>
+  <p class="lead">대기실은 M1에서 정비 공간으로 시작해, M2에서 열쇠·암호를 찾는 탐색 공간이 됐고, M3에서 맨몸과 도구로 길을 여는 구조로 바뀌었습니다. 매 단계 플레이테스트 결과와 팀 결정을 기획서에 반영하고, Jira 이슈와 작업 기록으로 변경을 남겼습니다.</p>
+  <div class="stage3">
+    <div><i>M1 · 10.06 ~ 10.22</i><b>정비 거점</b>대기실 1·2차 기획서, 8개 공간 그레이박스와 아트 적용. 상점·밤 정비·타이머 중심</div>
+    <div><i>M2 · 10.23 ~ 11.06</i><b>탐색 공간</b>백스테이지를 대기실에 통합, 공간 구조 A·B·C, 탐색 오브젝트 44개, 튜토리얼 24개, 리허설 시스템</div>
+    <div><i>M3 · 11.07 ~ 11.22</i><b>탈출 동선 확정</b>열쇠 동선 폐기, 통로 기믹, 신규 지역 8곳, 장소별 학습 이벤트, 버그 수정·최적화</div>
+  </div>
+  <div class="ms" role="tablist" aria-label="마일스톤 선택" id="ms"></div>
+  <div class="evgrid">
+    <div>
+      <div class="ev" id="ev"></div>
+      <div class="evbar"><input type="range" id="evr" min="0" step="1" value="0" aria-label="개발 단계 선택"></div>
+      <div class="ticks" id="ticks"></div>
+    </div>
+    <div class="evcap" id="evcap" aria-live="polite"></div>
+  </div>
+</div></section>
+
+<section id="decisions" class="band"><div class="wrap">
+  <p class="eyebrow">DESIGN DECISIONS</p>
+  <h2>기획 결정 기록</h2>
+  <p class="lead">같은 문제를 마일스톤마다 어떻게 바꿨는지 정리했습니다. 오른쪽 열이 M3 최종 상태입니다.</p>
+  <div class="scroll"><table class="dec3">
+    <thead><tr><th>항목</th><th>이전 (M1·M2)</th><th>변경 계기</th><th>M3 최종</th></tr></thead>
+    <tbody>
+      <tr><td>첫 플레이 학습</td><td>M1: 서명 직후 바로 외줄 공연</td><td>M1 피드백에서 공연과 규칙이 어렵다는 의견이 공통으로 나왔고, 대포 공연 성공 0/2</td><td>연습실 리허설 5구간 → 첫 공연. 추락 무패널티, 과반 동의로 구간 넘기기</td></tr>
+      <tr><td>백스테이지</td><td>M1: 대기실과 분리된 탐색 구역</td><td>M2 방향성 회의에서 공간과 흐름이 하나로 이어져야 한다고 결정</td><td>백스테이지 제거, 탐색 요소를 대기실 안으로 통합</td></tr>
+      <tr><td>대기실 구조</td><td>M2: 구조 A·B·C를 런마다 바꾸는 계획</td><td>구현 단계에서 구조 A만 제작하고, 런마다 섞는 배치는 만들지 않음</td><td>구조 A 고정. 방 24곳 프리팹화, 신규 지역 8곳 추가</td></tr>
+      <tr><td>길을 여는 방법</td><td>M2: 열쇠 6종 · 비밀번호 패드 · 2인 동시 상호작용</td><td>통로 기믹 원칙(11/09): 맨몸으로도 열 수 있고 도구가 있으면 더 빠르게, 새 애니메이션 없이 기존 동작 재사용</td><td>맨몸·천막 말뚝 뽑개로 부수기, 휴대 절단기로 배선 끊기, 배터리로 전력, 2인 목마로 오르기</td></tr>
+      <tr><td>부수기 조작</td><td>천막 말뚝 뽑개 6번 연타</td><td>플레이 피드백(11/13)으로 꾹 누르기 방식 도입 후 게이지 하나로 통합</td><td>F를 누르는 동안 게이지. 맨몸 1회 = 1.5초, 뽑개는 5배 빠름. 손을 떼도 진행 유지</td></tr>
+      <tr><td>안내 노출</td><td>M2: 첫날 안내를 순서대로 일괄 표시</td><td>플레이 피드백(11/15·11/17)으로 안내 시작 시점 조정</td><td>해금된 장소만 안내, 문 열림 연출이 끝난 뒤 시작. 장소별 학습 이벤트 추가</td></tr>
+      <tr><td>상호작용 거리</td><td>공통 2.5m</td><td>대기실 기물 거리를 절반으로 줄였다가(#384) 높은 단서에 닿지 않는 문제 발견(#385)</td><td>대기실 기물만 수평 1.25m, 높이 포함 거리는 2.5m 유지</td></tr>
+      <tr><td>상자 보상</td><td>꽝 포함</td><td>탐색 학습용 기물은 꽝 없이 배치한다는 계획(Task-126)</td><td>꽝 없음. 머리핀 20% · 토큰 50원 35% · 20원 30% · 100원 15%</td></tr>
+      <tr><td>연습실</td><td>M2: 리허설 이수 뒤 재연습</td><td>연습실을 자유 연습 공간으로 전환</td><td>재연습 삭제, 판정 없는 자유 연습 코스. 관객석 658개 삭제, 링 반지름 20 → 26.5m</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="space" class="band mist"><div class="wrap">
+  <p class="eyebrow">WAITING ROOM</p>
+  <h2>대기실 기획과 공간 제작</h2>
+  <p class="lead">폐공장을 급조해 만든 서커스 단원 대기실입니다. 로비에서 공연장까지는 한 줄로 명확하게, 탐색 동선은 가지를 뻗도록 구성했습니다. 아래는 M3 최종 구조입니다.</p>
+
+  <div class="two">
+    <div class="task"><h3>M3 구역 구성</h3><ul>
+      <li><b>1층 거점</b> 원형 로비(지름 28.5m) · 숙소 · 상점 · 휴게 공간 · 승강기 홀 · 연습실</li>
+      <li><b>공연 동선</b> 로비 북쪽 무대 입구 통로(65×14m) → 공연 스테이지 입구</li>
+      <li><b>작업 구역</b> 작업실·소품실(전실 공용) · 폐기물 보관소 · 무대 장치 보관실 · 화물 적재 구역</li>
+      <li><b>지하 1층</b> 기계실(캣워크 포함) · 관리실 · 탈의실 · 탈출로 통로</li>
+      <li><b>M3 신규 8곳</b> 전실 · 뒤쪽 복도 · 이전 세대 생활 장소 · 창고 · 설비실 · 숨겨진 방 1·2 · 숙소 녹슨 벽 방</li>
+    </ul></div>
+    <div class="task"><h3>구조 변경과 정리</h3><ul>
+      <li>무대 입구 통로를 로비 북쪽으로, 작업실·소품실을 로비 남쪽 전실 양옆으로 맞바꿈</li>
+      <li>방 24곳을 장소 기준 공간 프리팹으로 분리해 씬 용량 74MB → 16MB</li>
+      <li>추격자가 다니는 방 26곳 → 31곳으로 등록, 구조 변경 뒤 추격 NavMesh 재굽기</li>
+      <li>잠긴 장소는 밤 정비 철창 대신 한쪽에서만 열리는 빗장 문으로 교체</li>
+    </ul></div>
+  </div>
+
+  <div id="m1">
+    <h3 class="sub">M1 · 그레이박스에서 분위기까지</h3>
+    <ol class="cycle">
+      <li><b>기획서</b>10.07~10.16 대기실 1·2차 기획서. 진입·퇴장, 쉬는 시간 타이머, 상점·선반·스케줄표, 밤 정비 규칙</li>
+      <li><b>그레이박스</b>8개 주요 공간과 공연장 왕복 동선. 좁은 방에서 카메라가 벽 밖으로 나가지 않게 방 깊이·카메라 거리 조정</li>
+      <li><b>렌더 비교</b>URP와 HDRP로 대기실 프로토타입을 비교하고, 그레이박스 도형을 실제 에셋으로 바꿀 목록 정리</li>
+      <li><b>재질 · 조명</b>녹슨 철·젖은 콘크리트·낡은 판자·붉은 벨벳, 청록 배경광과 전구색 포인트, 방별 안개 밀도</li>
+    </ol>
+  </div>
+
+  <h3 class="sub">M3 최종 탈출 동선</h3>
+  <ol class="cycle" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+    <li><b>숙소 환풍구</b>2인 목마로 올라 설비실 → 배터리로 셔터를 열어 지하 기계실 캣워크</li>
+    <li><b>숨은 길</b>숙소 화장실 녹슨 벽 → 폐기물 보관소 → 배관 구역 → 뒤쪽 복도 → 이전 세대 생활 장소</li>
+    <li><b>숏컷</b>창고 창문 → 무대 장치 보관실(한 방향) → 휴대 절단기 획득</li>
+    <li><b>관리실</b>기계실 배선 4가닥 절단 · 안쪽 빗장 · 키 카드 중 하나로 문 열기</li>
+    <li><b>탈출로</b>단서로 찾은 날짜와 암구호를 관리실 컴퓨터에 입력 → 나가는 길 개방 연출 → 전원 집결</li>
+  </ol>
+  <p class="note">숏컷은 한 번 열면 계속 열려 있고, 탐색 진행은 세대가 바뀌면 초기화됩니다.</p>
+</div></section>
+
+<section id="exploration" class="band"><div class="wrap">
+  <p class="eyebrow">EXPLORATION</p>
+  <h2>단서를 읽고, 부수고, 끊어서 여는 길</h2>
+  <p class="lead">M2에서는 열쇠와 비밀번호를 모아 탈출로를 여는 구조로 탐색 오브젝트 44개와 도구 5종을 구현했습니다. M3에서는 열쇠 동선을 걷어 내고, 이미 있는 F 상호작용·말뚝 뽑개 타격·운반·목마·트램펄린 동작을 재사용하는 통로 기믹으로 다시 짰습니다.</p>
+
+  <h3 class="sub">통로 기믹 원칙 (11/09)</h3>
+  <div class="rules">
+    <div class="key"><b>맨몸으로도 열린다</b>도구가 있으면 더 빠를 뿐, 도구가 없어서 막히지 않게 합니다. 전력 차단만 휴대 절단기가 필요합니다.</div>
+    <div><b>열쇠·암호 최소화</b>열쇠는 쓰지 않고 자물쇠는 최소한으로 둡니다. 최종 구현에서 암호는 관리실 컴퓨터 하나만 남겼습니다.</div>
+    <div><b>새 동작 없이</b>새 애니메이션을 거의 추가하지 않고 기존 조작을 재사용합니다.</div>
+    <div><b>협동 강제 없음</b>2인 동시 상호작용은 없애고, 목마처럼 함께하면 열리는 길만 남겼습니다.</div>
+  </div>
+
+  <div class="two">
+    <figure class="shot"><img src="assets/m3-wall-graffiti.jpg" alt="벽의 낙서 5: '가고 싶지 않아'가 세 번 반복된 조사 화면" loading="lazy"><figcaption>벽 낙서 살펴보기 · 이전 세대 단원이 남긴 단서</figcaption></figure>
+    <div class="scroll" style="margin-top:0"><table>
+      <thead><tr><th>기믹</th><th>여는 방법 (맨몸 / 뽑개)</th></tr></thead>
+      <tbody>
+        <tr><td>녹슨 벽</td><td>숨겨진 방 맨몸 6 / 뽑개 1 · 화장실·기계실 벽 맨몸 15 / 뽑개 6</td></tr>
+        <tr><td>빗장 문</td><td>계단 빗장 3 / 1, 화물 철문 빗장 6 / 1. 한쪽에서만 열림</td></tr>
+        <tr><td>전기 문</td><td>배터리를 꽂으면 열림, 빼면 닫힘. 회로를 부수면 열린 채 고정</td></tr>
+        <tr><td>배선 절단</td><td>휴대 절단기로 톱날을 쏴 배선을 끊음. 모두 끊으면 정전 연출</td></tr>
+        <tr><td>수직 이동</td><td>2.3m 환풍구는 2인 목마 전제, 높은 곳은 목마·트램펄린</td></tr>
+        <tr><td>숏컷</td><td>창고 창문에서 보관실로 내려가는 한 방향 길</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <p class="note">맨몸 숫자 1 = 1.5초 (맨몸 6 = 9초, 맨몸 15 = 22.5초).</p>
+
+  <h3 class="sub">단서 · 기록 기물</h3>
+  <div class="rules">
+    <div><b>벽 낙서 · 숨겨진 낙서</b>3m 거리에서 읽히도록 글씨를 0.085m → 0.12~0.22m로 키우고 붓글씨로 통일. UV 등으로만 보이는 낙서 포함</div>
+    <div><b>찢겨진 노트 낱장 6장</b>캐비넷·트렁크·잠긴 상자·서랍 속에 나눠 두고, 쪽 넘기기로 읽는 조사 화면</div>
+    <div><b>비디오 테이프 · TV</b>테이프를 넣으면 이전 세대의 기록 영상이 반복 재생. 처음 다가가면 흑백 노이즈</div>
+    <div><b>단장 모니터</b>남은 탐색 시간에 따라 지켜봄 → 시큰둥 → 사라짐으로 표정이 바뀌는 압박 장치</div>
+  </div>
+</div></section>
+
+<section id="tutorial" class="band mist"><div class="wrap">
+  <p class="eyebrow">REHEARSAL &amp; TUTORIAL</p>
+  <h2>공연은 리허설로, 대기실은 걸으면서 배우기</h2>
+  <p class="lead">공연 조작은 ‘리허설’, 대기실 기능은 ‘튜토리얼’로 나눴습니다. 기준은 진행자 설명 없이 다음 행동과 목적지를 스스로 찾는지입니다. 탐색 퍼즐은 단서·도구의 쓰임까지만 알리고 해법은 알려 주지 않습니다.</p>
+
+  <h3 class="sub">최초 외줄타기 리허설 · 5구간</h3>
+  <p class="lead" style="margin-top:0">실제 공연 코스·HUD·조작을 그대로 쓰고, 추락해도 부상 없이 1.5초 뒤 구간 출발점에서 다시 시작합니다. 과반이 동의하면 구간을 넘깁니다(4명 3표, 3명·2명 2표).</p>
+  <div class="scroll"><table>
+    <thead><tr><th>구간</th><th>배우는 것</th><th>완료</th></tr></thead>
+    <tbody>
+      <tr><td>1 · 외줄 건너기</td><td>균형 잡기, 전진·후진, 끊긴 줄에서 옆줄로 점프</td><td>전원 도착 또는 1명 도착 후 과반 동의</td></tr>
+      <tr><td>2 · 그네타고 건너기</td><td>그네 잡기, 반동, 점프로 건너편 줄에 착지</td><td>같음</td></tr>
+      <tr><td>3 · 연속 그네</td><td>체공 중 다음 그네 잡기</td><td>같음</td></tr>
+      <tr><td>4 · 트리거 그네</td><td>그네를 잡고 있는 동안 끊긴 줄이 이어짐</td><td>1명 도착 즉시</td></tr>
+      <tr><td>5 · 목마와 높은 그네</td><td>동료와 목마로 높은 그네에 매달리기</td><td>전원 도착 또는 과반 동의</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">M2에는 3단계(외줄 · 인간 그네 · 종합)로 기획했고, M3에서 5구간으로 나누고 길안내를 강한 단색 펄스로 바꿨습니다. 인간대포 리허설은 대포를 해금하면 호스트에게 이동 여부를 묻습니다.</p>
+
+  <div id="m2">
+    <h3 class="sub">대기실 튜토리얼 · 안내 24개 (M2 → M3)</h3>
+    <div class="two">
+      <figure class="shot"><img src="assets/m2-waiting-room-guide.png" alt="대기실 안내 패널과 대기실 튜토리얼 목표 표시가 보이는 개발 화면" loading="lazy"><figcaption>왼쪽 가이드 패널(자동으로 사라짐) · 오른쪽 퀘스트 패널(조건을 채우면 사라짐)</figcaption></figure>
+      <div class="tasks">
+        <div class="task"><h3>M2 · 안내 구성</h3><ul>
+          <li>조작을 잠그는 연계 안내와 카메라 클로즈업: 무대 복귀, 상점, 스케줄표, 선반, 침대</li>
+          <li>처음 1회 뜨는 상황 안내: 상호작용, 살펴보기, 도구 3종, 단서, 의료 서비스 등</li>
+          <li>안내 문구·패널 설정을 텍스트 파일로 분리해 코드 수정 없이 고칠 수 있게 정리</li>
+          <li>개인별 진행, 팀 사건(공연 해금·동료 사망)은 모두에게 표시. 전원이 확인해야 탐색 시작</li>
+        </ul></div>
+        <div class="task"><h3>M3 · 규칙 변경</h3><ul>
+          <li>첫 공연 → 복귀 → 전원 확인 전까지 숙소·작업실·연습실 철창으로 잠금 (높이 5.5m, 투명 벽 두께 1.2m로 목마 넘기 차단)</li>
+          <li>해금되지 않은 장소는 안내하지 않고, 문 열림 연출이 끝난 뒤 안내 시작</li>
+          <li>소품실 선반 안내는 방에 들어선 순간, 숙소 문이 닫혀 있으면 “숙소 문 열기” 안내 신설</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="sub">장소별 학습 이벤트 (M3)</h3>
+  <div class="two" style="margin-top:0">
+    <div class="task"><h3>숙소</h3><ul>
+      <li>처음 들어서면 문이 닫히고 녹슨 휴대 절단기가 넘어짐 → 배선을 끊어 문 열기</li>
+      <li>숙소 북쪽 녹슨 벽 발견 연출 → F를 길게 눌러 부수기 → 보상으로 말뚝 뽑개</li>
+      <li>TV에 비디오 테이프 넣기, 환풍구에서 앉아 이동하기 안내</li>
+      <li><b>배우는 것</b> 배선 절단, 부수기, 소켓형 기물, 목마로 높은 곳 오르기</li>
+    </ul></div>
+    <div class="task"><h3>작업실 · 소품실</h3><ul>
+      <li>잠긴 전기 문 → 로비 쓰레기 더미에서 배터리 1개 찾기 → 동력 소켓에 꽂기</li>
+      <li>배관함과 회로를 부수면 문이 열린 채 고정되고, 상점의 공연 기물 4종 구매가 풀림</li>
+      <li>소품실 바닥 포스트잇은 관리실 컴퓨터 암구호 단서</li>
+      <li><b>배우는 것</b> 임시로 열기(배터리)와 영구히 열기(회로 파괴)의 차이</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section id="fixes" class="band"><div class="wrap">
+  <p class="eyebrow">ITERATION</p>
+  <h2>구현 문제 해결</h2>
+  <p class="lead">M3 기간(11/09~11/20) 대기실 버그 수정·고도화를 날짜순으로 기록했습니다. 플레이로 확인하지 않은 항목은 “플레이 미확인”으로 따로 표시해 관리했습니다.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>문제</th><th>원인</th><th>조치</th></tr></thead>
+    <tbody>
+      <tr><td>대기실이 무거움</td><td>매 프레임 씬 전체 검색, 트리거 쌍, OnGUI 사용</td><td>구조 정리 후 프로파일러로 Update 29.1 → 7.8ms, LateUpdate 19.4 → 7.3ms</td></tr>
+      <tr><td>벽·바닥 깜빡임</td><td>방 맞바꿈 이전에 구운 오클루전 데이터, 같은 자리에 겹친 면 62쌍</td><td>보이는 면 겹침 수정 후 오클루전 재굽기. 배관 구역 겹침 26.6m² → 0</td></tr>
+      <tr><td>톱날이 쏘자마자 사라짐</td><td>판정 반지름이 탈출로 씬 값(1.1m)이라 발사 순간 주변에 닿음</td><td>대기실은 0.35m로 분리, 막힌 발사구는 당겨서 발사</td></tr>
+      <tr><td>“바닥에 더 놓을 수 없습니다”</td><td>바닥 기물 한도 32개인데 발견품 자리가 47곳</td><td>한도 96개로 조정</td></tr>
+      <tr><td>높은 단서에 점프해야 닿음</td><td>상호작용 거리 절반 규칙이 높이에도 적용</td><td>수평 거리만 줄이고 3차원 거리는 유지, 대상 94개 전수 확인</td></tr>
+      <tr><td>잠긴 문 너머가 비침</td><td>문틀 4곳에 카메라용 벽 표시와 충돌체가 없음</td><td>문틀에 표시·충돌체 추가, 문틀 안에 설 수 있던 자리 18 → 0 (플레이 확인 완료)</td></tr>
+      <tr><td>추격자가 선반 위로 못 오름</td><td>끊김 없는 수직 벽만 오르기 대상으로 인정</td><td>2.2m 안쪽 간격으로 잡을 곳이 있으면 오르게 함. 오를 수 있는 곳 90 → 227</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="assets" class="band mist"><div class="wrap">
+  <p class="eyebrow">ASSET MANAGEMENT</p>
+  <h2>전체 에셋 관리와 공간별 기물</h2>
+  <p class="lead">팀 전체가 쓰는 후보 에셋을 같은 기준으로 판정하고, 기존 에셋 활용 · 수정 활용 · 신규 제작을 구분해 중복 제작을 줄였습니다.</p>
+  <h3 class="sub">검수 기준 5가지</h3>
+  <div class="rules">
+    <div class="key"><b>테마</b>서커스 · 폐공장 콘셉트에 맞는가</div>
+    <div><b>그래픽 일치</b>로우폴리 스타일과 어울리는가</div>
+    <div><b>Unity 적용</b>프로젝트에 문제없이 들어가는가</div>
+    <div><b>표현 수위</b>코미디 공포 톤을 넘지 않는가</div>
+    <div><b>라이선스</b>사용 조건을 충족하는가</div>
+  </div>
+  <p class="note">대상: 캐릭터 · 환경 · 오브젝트 · 텍스처 · 사운드 · UI · 이펙트. 판정은 통과 · 조건부 통과 · 보류 · 반려로 나누고 사유와 적용·변경 상태를 함께 기록했습니다.</p>
+
+  <h3 class="sub">공간에 적용한 기물</h3>
+  <div class="two" style="margin-top:0">
+    <div class="task"><h3>M2 · 서커스 기물과 이전 세대 흔적</h3><ul>
+      <li>화물 적재 장소 · 무대 장치 보관실 · 소품실 · 폐기물 보관소 · 연습실의 기물 목록과 우선 확보 대상 <b>12종</b></li>
+      <li>보관용 그네 틀 · 외줄 받침 · 공연 단상 · 무대 배경판 · 커튼 권취 장치 · 조명 랙 제작·배치</li>
+      <li>이전 세대의 탈과 코스튬으로 생활 흔적 구성, 도형으로 남은 기물은 제작 대상 목록으로 관리</li>
+    </ul></div>
+    <div class="task"><h3>M3 · 신규 지역 연출</h3><ul>
+      <li>이전 세대 생활 장소에 생활 소품 153개, 뒤쪽 복도는 버려진 사무실(초록 칠·형광등·불투명 유리)</li>
+      <li>폐기물 보관소 전시 인형 옷 4벌: 플레이어와 색이 같다는 피드백으로 색조를 돌리고 주저앉은 자세로 교체</li>
+      <li>녹 가루 입자, 붉은 화살표, 생활 장소 조명 추가</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section id="craft" class="tone band"><div class="wrap">
+  <p class="eyebrow">TONE &amp; MANNER</p>
+  <h2>서커스와 폐공장의 대비</h2>
+  <p class="lead">공연장은 화려한 표면으로, 대기실은 방치된 폐공장과 교도소 같은 폐쇄감에 따뜻한 전구색을 더해 구분했습니다.</p>
+  <div class="tones">
+    <div><small>SHAPE &amp; MATERIAL</small><b>형태 · 재질</b><p>단순한 로우폴리 실루엣에 낡은 줄무늬 천막, 붉은 벨벳, 녹슨 철, 판자를 기준 재질로 삼아 에셋을 맞췄습니다.</p></div>
+    <div><small>COLOR &amp; LIGHT</small><b>색 · 조명</b><p>바랜 빨강·노랑과 차가운 시설색을 대비시키고, 전구와 스포트라이트로 주요 행동 지점을 드러냈습니다.</p></div>
+    <div><small>ENVIRONMENT</small><b>공간 연출</b><p>노출 배관, 철골, 안개, 불규칙한 전구로 대기실의 방치된 분위기를 만들었습니다.</p></div>
+  </div>
+  <div class="swatch" aria-label="기준 색">
+    <span style="--c:#b8322a">바랜 빨강</span><span style="--c:#d8a33a">바랜 노랑</span><span style="--c:#2f4a4a">청록 배경광</span><span style="--c:#e9b872">전구색 포인트</span><span style="--c:#55585a">콘크리트 · 철</span>
+  </div>
+</div></section>
+
+<section id="test" class="band"><div class="wrap">
+  <p class="eyebrow">PLAYTEST &amp; QA</p>
+  <h2>플레이테스트와 반영</h2>
+  <p class="lead">2026년 10월 23일 첫 빌드 플레이테스트의 설문과 플레이 로그를 분석했습니다. 첫날 밤 설문 18건과 종료 설문 11건은 서로 다른 응답 집합이며, 수치는 각 문항의 응답 건수입니다.</p>
+  <div class="kpis">
+    <div class="kpi"><strong>16/18</strong><h3>다음 목표를 알기 어려움</h3><span>첫날 밤 설문에서 ‘무엇을 해야 하는지’를 불편 항목으로 선택</span><div class="bar"><i style="width:88.9%"></i></div></div>
+    <div class="kpi"><strong>9/11</strong><h3>탐색 구간이 지루함</h3><span>종료 설문에서 쉬는 시간의 이동·탐색을 지루한 구간으로 선택</span><div class="bar"><i style="width:81.8%"></i></div></div>
+    <div class="kpi"><strong>8/11</strong><h3>밤 정비가 지루함</h3><span>종료 설문에서 구매·정비 구간을 지루한 구간으로 선택</span><div class="bar"><i style="width:72.7%"></i></div></div>
+  </div>
+  <h3 class="sub">설문 결과와 조치</h3>
+  <div class="fx">
+    <div><small>M2 반영 → M3 보강</small><q>다음 목표를 알기 어려움</q><p>M2에 가이드 패널·클로즈업·안내 24개와 리허설을 추가했고, M3에서 해금된 장소만 안내하는 규칙과 장소별 학습 이벤트로 보강했습니다. <a class="tlink" href="#tutorial" style="min-height:0">튜토리얼 보기</a></p></div>
+    <div><small>M3 재설계</small><q>탐색 구간이 지루함</q><p>M3에서 열쇠를 찾는 구조를 걷어 내고, 부수기·배선·전력·목마로 길이 바로 열리는 통로 기믹과 숨겨진 방, 꽝 없는 상자로 바꿨습니다. <a class="tlink" href="#exploration" style="min-height:0">탐색 보기</a></p></div>
+    <div><small>M3 방향 전환</small><q>밤 정비가 지루함</q><p>M3에서 밤 정비는 삭제 예정 기능으로 분류됐습니다. 정전 연출과 구역 잠금이 밤 정비 기능에 얹혀 있어, 삭제 전에 분리할 항목을 정리해 두었습니다.</p></div>
+  </div>
+  <h3 class="sub">로그 수집과 검증</h3>
+  <div class="two" style="margin-top:0">
+    <div class="task"><h3>대기실·리허설·탐색 로그 수집 목록 (11/04)</h3><ul>
+      <li>대기실 진입 → 리허설 → 대기실 안내 → 탐색·단서 조사·해금 → 탈출로 집결까지 수집 범위 정의</li>
+      <li>이미 수집 중인 항목과 추가 구현이 필요한 항목을 구분</li>
+    </ul></div>
+    <div class="task"><h3>검증 기록 방식</h3><ul>
+      <li>수정마다 컴파일·EditMode 결과와 플레이 확인 여부를 분리해 기록</li>
+      <li>M3 최종 빌드(11/22) 설문은 집계 전입니다.</li>
+    </ul></div>
+  </div>
+  <div class="video" role="img" aria-label="플레이 영상 준비 중"><div><b>CURTAIN CALL</b>플레이 영상 준비 중</div></div>
+</div></section>
+
+<section id="docs" class="band mist"><div class="wrap">
+  <p class="eyebrow">DOCUMENTS</p>
+  <h2>작업 문서</h2>
+  <div class="dlist">
+    <article class="dcard"><small>M1 · 기획서</small><h3>대기실 2차 기획서</h3><p>진입·퇴장 조건, 쉬는 시간 타이머, 상점·선반·스케줄표, 밤 정비와 취침 규칙</p><a class="tlink" href="https://docs.google.com/document/d/1AMRiyssdwj5FFL03OfNqvJ_0N06H13w7xiI85ECDcCY/view" target="_blank" rel="noopener">문서 보기 →</a></article>
+    <article class="dcard"><small>M2 · 기획서</small><h3>공연 리허설 시스템 기획서</h3><p>리허설 흐름, 외줄·인간대포 리허설 단계와 완료 조건, 가이드·퀘스트 패널 문구, 길안내 규칙</p><a class="tlink" href="https://docs.google.com/document/d/1ajABs87srd4A6vjaKxfzkIjxC7fr8t_6Hvw2KjJzhWQ/view" target="_blank" rel="noopener">문서 보기 →</a></article>
+    <article class="dcard"><small>M3 · 기획서</small><h3>대기실 변경안 · 신규 지역 기획서</h3><p>열쇠 동선 폐기, 방 맞바꿈, 신규 지역 8곳, 최종 탈출 동선, 문서와 구현이 다른 곳</p><a class="tlink" href="https://drive.google.com/file/d/1131_XlREj_LldbPCJeXhrqipzBJixTaG/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
+    <article class="dcard"><small>M3 · 기획서</small><h3>튜토리얼 기획서</h3><p>리허설 5구간, 대기실 튜토리얼 G·N·S, 숙소·작업실·소품실 학습 이벤트, M2와 M3 구분</p><a class="tlink" href="https://drive.google.com/file/d/1Xpp4OAbu53_Vq1gcA6GPY6lNctJBE9CO/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
+    <article class="dcard"><small>M3 · 기획서</small><h3>대기실 기물 · 오브제 기획서</h3><p>단서·기록·영상 등 대기실에서 읽고 보고 조작하는 모든 기물과 표시 문구</p><a class="tlink" href="https://drive.google.com/file/d/1UBiNA9sWqikqLQdZ9BoYsbqSThf_PD1Z/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
+    <article class="dcard"><small>M3 · 작업 기록</small><h3>대기실 버그 수정 및 고도화 기록</h3><p>11/9~11/20 증상·원인·조치·검증을 날짜순으로 정리하고, 번복된 결정과 최종 상태 기록</p><a class="tlink" href="https://drive.google.com/file/d/1kPQzGuBq4pFEPxnkh7D2Ta2xYwlCsDLE/view" target="_blank" rel="noopener">PDF 보기 →</a></article>
+  </div>
+</div></section>
+
+<footer class="band"><div class="wrap">
+  <b>커튼콜</b>
+  <span>서민규 · 2026 4인 팀 프로젝트 · Unity 6 · PC</span>
+  <a class="tlink" style="color:#fff" href="https://gyumin9048-ctrl.github.io/portfolio-public/">포트폴리오로 돌아가기 →</a>
+</div></footer>
+
+<script>
+{
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  /* gallery */
+  const g=document.getElementById("gal");
+  const step=d=>{const f=g.querySelector("figure");g.scrollBy({left:d*(f.offsetWidth+16),behavior:"smooth"})};
+  document.getElementById("gp").addEventListener("click",()=>step(-1));
+  document.getElementById("gn").addEventListener("click",()=>step(1));
+  g.addEventListener("keydown",e=>{if(e.key==="ArrowRight")step(1);if(e.key==="ArrowLeft")step(-1)});
+
+  /* development process: [milestone, date, title, text, image or null, doc bullets, source] */
+  const steps=[
+    ["M1","09.30~10.03","톤앤매너 · 에셋 기준",
+     "서커스와 폐공장의 대비를 톤앤매너로 정리하고, 팀 전체 에셋 검수 기준과 판정 절차를 만들었습니다. 이후 에셋 리스트 작성에서 최종 사용 에셋 선별로 방향을 바꿨습니다.",
+     null,["검수 기준 5가지 · 판정 4단계","로우폴리 / 반실사 / 실사 후보 비교","최종 사용 에셋 1차 정리 (10/03)"],"에셋 관리와 검수 기준 · 톤앤매너"],
+    ["M1","10.07~10.16","대기실 1·2차 기획서",
+     "대기실을 공연 사이의 안전한 정비 거점으로 정의했습니다. 컨펌 후 게임 흐름 기획에 맞춰 타이머·상점·밤 정비·세트리스트 규칙을 맞추고 가이드 쉬는 시간을 추가했습니다.",
+     null,["진입·퇴장과 공연 후 복귀 흐름","쉬는 시간 타이머 · 밤 정비 · 취침","상점 · 소품실 보관 · 스케줄표"],"커튼 콜 대기실 2차 기획서"],
+    ["M1","10.19~10.22","그레이박스와 아트 적용",
+     "8개 주요 공간 그레이박스를 만들고 URP·HDRP 프로토타입을 비교한 뒤, 도형을 실제 에셋으로 교체할 목록을 만들어 대기실 아트를 적용했습니다.",
+     null,["URP / HDRP 대기실 프로토타입 비교","그레이박스 에셋 적용 목록 · 재사용 후보","실내 밀도 고도화 PR 제출"],"M1 작업노트"],
+    ["M2","10.26~10.29","백스테이지 통합 · 구조 A·B·C",
+     "M2 방향성 회의에서 백스테이지를 없애고 그 탐색 요소를 대기실로 옮기기로 했습니다. 대기실을 공연 오브제와 탈출로를 찾는 탐색 공간으로 다시 정의하고 구조 A·B·C 제작 규칙을 썼습니다.",
+     null,["공통 고정 구역: 로비 · 무대 입구 통로 · 스테이지 입구","화장실 파괴벽 → 배관 구역 → 폐기물 보관소","대포·트램펄린 등장 후보 지점 확보"],"대기실 공간 구조 기획서 (A·B·C)"],
+    ["M2","10.30","탐색 오브젝트 44개",
+     "구조 A에 탐색 대상 44개와 도구 5종을 구현했습니다. 단서를 조사하고 도구를 모아 잠긴 상자·문을 열고, 열쇠와 암호를 모아 탈출로 문을 여는 구조였습니다.",
+     null,["단색 도형으로 기능 연결 먼저 구현","상세 기획서가 필요한 항목을 따로 정리","열쇠 · 암호 · 2인 동시 상호작용 시험"],"탐색 오브젝트 기획서 (CC-181)"],
+    ["M2","10.31~11.01","대기실 튜토리얼 24개",
+     "10/23 테스트에서 ‘다음 목표를 알기 어렵다’가 16/18건이었습니다. 첫날 쉬는 시간과 밤 정비에 안내 24개와 카메라 클로즈업을 넣고, 문구를 텍스트 파일로 분리했습니다.",
+     "assets/m2-waiting-room-guide.png",null,"대기실 튜토리얼 가이드 · 문구 파일 가이드 (Task-086)"],
+    ["M2","11.03~11.04","공연 리허설 시스템",
+     "M1에서 공연이 어렵고 클리어가 없었다는 피드백을 바탕으로, 첫 공연 전 연습실에서 조작을 배우는 리허설을 기획했습니다. 실제 공연 에셋과 조작을 그대로 쓰고 패널티를 없앴습니다.",
+     null,["외줄 리허설 3단계 + 인간대포 리허설","설명 패널 · 퀘스트 패널 문구 확정","대기실·리허설·탐색 로그 수집 목록"],"공연 리허설 시스템 기획서 (CC-210~245)"],
+    ["M3","11.09~11.11","통로 기믹 원칙 · 프리팹화",
+     "열쇠·암호 대신 기존 동작으로 길을 여는 통로 기믹 원칙을 세우고, 방 24곳을 공간 프리팹으로 나눠 씬 용량을 74MB에서 16MB로 줄였습니다.",
+     null,["맨몸으로도 열리고 도구가 있으면 더 빠르게","통로 기믹 0~15 (CC-250~265)","공간 프리팹 24종으로 장소 기준 재분류"],"통로 기믹 타입·레퍼런스 정리 · 프리팹화 기록"],
+    ["M3","11.12~11.15","열쇠 폐기 · 신규 지역 8곳",
+     "열쇠 6종과 비밀번호 패드를 지우고 방 위치를 맞바꿨습니다. 이전 세대 생활 장소·숨겨진 방 등 8곳을 새로 만들고 단서 글씨를 3m에서 읽히게 키웠습니다.",
+     "assets/m3-wall-graffiti.jpg",null,"대기실 변경안 · 신규 지역 기획서"],
+    ["M3","11.13~11.17","장소별 학습 이벤트",
+     "숙소 문 오작동, 녹슨 벽, 전기 문과 배터리, TV 테이프처럼 이동하면서 탐색 조작을 배우는 이벤트를 넣고, 해금 전 장소는 안내하지 않도록 규칙을 바꿨습니다.",
+     "assets/m3-dorm-tv.jpg",null,"튜토리얼 기획서 (숙소 · 작업실 · 소품실)"],
+    ["M3","11.16~11.20","버그 수정 · 최종 규칙",
+     "팀 버그 리포트를 Jira로 받아 날마다 수정하고, 관리실 문·탈출로 조건을 확정했습니다. 프로파일러로 Update 29.1ms를 7.8ms로 줄였습니다. 11/22 최종 빌드 0.8.9.",
+     null,["CC-295 · CC-301 버그 수정","관리실 문 = 배선 4가닥 · 빗장 · 키 카드 중 하나","탈출로 문 = 관리실 컴퓨터 암호"],"대기실 버그 수정 및 고도화 기록"]
+  ];
+  const ev=document.getElementById("ev"),evr=document.getElementById("evr"),ticks=document.getElementById("ticks"),evcap=document.getElementById("evcap"),ms=document.getElementById("ms");
+  const N=steps.length;evr.max=N-1;ticks.style.setProperty("--n",N);
+  const mils=[["M1","정비 거점"],["M2","탐색 공간"],["M3","탈출 동선 확정"]];
+  ms.innerHTML=mils.map(m=>`<button type="button" role="tab" data-m="${m[0]}" aria-selected="false">${m[0]}<small>${esc(m[1])}</small></button>`).join("");
+  ticks.innerHTML=steps.map((s,i)=>`<button type="button" data-i="${i}" aria-label="${esc(s[0]+" "+s[2])}"><b>${esc(s[0])}</b>${esc(s[1])}</button>`).join("");
+  const show=i=>{i=Math.max(0,Math.min(N-1,i));evr.value=i;const s=steps[i];
+    ev.innerHTML=s[4]?`<img src="${s[4]}" alt="${esc(s[2])} 개발 화면"><span class="tag">${esc(s[0])} · ${esc(s[1])}</span>`
+      :`<div class="doc"><small>${esc(s[0])} · ${esc(s[1])} · 기획 문서</small><b>${esc(s[2])}</b><ul>${s[5].map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`;
+    [...ticks.children].forEach((b,k)=>b.classList.toggle("on",k===i));
+    [...ms.children].forEach(b=>b.setAttribute("aria-selected",b.dataset.m===s[0]));
+    evcap.innerHTML=`<small>${esc(s[0])} · ${esc(s[1])}</small><b>${esc(s[2])}</b><p>${esc(s[3])}</p><p class="src">근거: ${esc(s[6])}</p><div class="evnav"><button type="button" id="evp" aria-label="이전 단계">‹</button><button type="button" id="evn" aria-label="다음 단계">›</button></div>`;
+    document.getElementById("evp").onclick=()=>show(i-1);document.getElementById("evn").onclick=()=>show(i+1)};
+  evr.addEventListener("input",()=>show(+evr.value));
+  ticks.addEventListener("click",e=>{const b=e.target.closest("button");if(b)show(+b.dataset.i)});
+  ms.addEventListener("click",e=>{const b=e.target.closest("button");if(b)show(steps.findIndex(s=>s[0]===b.dataset.m))});
+  show(0);
+
+  /* deep links (#m2 ...) land after fonts and images settle; old tab link #work goes to 담당 업무 */
+  const legacy={work:"role"};
+  const land=()=>{const h=decodeURIComponent(location.hash.slice(1));if(h)document.getElementById(legacy[h]||h)?.scrollIntoView()};
+  window.addEventListener("load",land);
+}
+</script>
+</body>
+</html>
