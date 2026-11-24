@@ -1,0 +1,33 @@
+name: raw-assets
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['tools/**']
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: deps
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg poppler-utils imagemagick webp >/dev/null
+          pip install -q gdown
+      - name: run
+        run: bash tools/run.sh
+      - name: publish
+        run: |
+          git config user.name "gyumin9048-ctrl"
+          git config user.email "gyumin9048-ctrl@users.noreply.github.com"
+          if [ -d out/main ] && [ -n "$(ls -A out/main)" ]; then
+            cp -r out/main/. .
+            git add -A -- . ':!out' ':!work'
+            git commit -m "Update assets from tools/run.sh" || true
+            git push origin HEAD:main
+          fi
+          if [ -d out/raw ] && [ -n "$(ls -A out/raw)" ]; then
+            cd out/raw && git init -q && git checkout -q -b raw && git add -A && git commit -qm "raw captures" \
+              && git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" raw
+          fi
