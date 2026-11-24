@@ -20,25 +20,7 @@
   "asset-18.webp",
   "asset-19.webp",
   "asset-20.webp",
-  "asset-21.webp",
-  "asset-22.webp",
-  "asset-23.webp",
-  "asset-24.webp",
-  "asset-25.webp",
-  "asset-26.webp",
-  "asset-27.webp",
-  "asset-28.webp",
-  "asset-29.webp",
-  "asset-30.webp",
-  "asset-31.webp",
-  "asset-32.webp",
-  "asset-33.webp",
-  "asset-34.webp",
-  "asset-35.webp",
-  "asset-36.webp",
-  "asset-37.webp",
-  "asset-38.webp",
-  "asset-39.webp"
+  "asset-21.webp"
  ],
  "m2wait": [
   "m2wait-01.webp",
@@ -62,18 +44,7 @@
   "m2wait-19.webp",
   "m2wait-20.webp",
   "m2wait-21.webp",
-  "m2wait-22.webp",
-  "m2wait-23.webp",
-  "m2wait-24.webp",
-  "m2wait-25.webp",
-  "m2wait-26.webp",
-  "m2wait-27.webp",
-  "m2wait-28.webp",
-  "m2wait-29.webp",
-  "m2wait-30.webp",
-  "m2wait-31.webp",
-  "m2wait-32.webp",
-  "m2wait-33.webp"
+  "m2wait-22.webp"
  ],
  "m3bugs": [
   "m3bugs-01.webp",
@@ -184,18 +155,13 @@
   "rehearsal-16.webp",
   "rehearsal-17.webp",
   "rehearsal-18.webp",
-  "rehearsal-19.webp",
-  "rehearsal-20.webp",
-  "rehearsal-21.webp",
-  "rehearsal-22.webp",
-  "rehearsal-23.webp",
-  "rehearsal-24.webp",
-  "rehearsal-25.webp"
+  "rehearsal-19.webp"
  ],
  "space": [
   "space-01.webp",
   "space-02.webp",
   "space-03.webp",
-  "space-04.webp"
+  "space-04.webp",
+  "space-05.webp"
  ]
 }
